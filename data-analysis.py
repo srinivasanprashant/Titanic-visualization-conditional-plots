@@ -47,7 +47,7 @@ print(titanic["Age"].describe())
 # Subsets the dataframe on different combinations of unique values in both the Pclass and Survived columns
 # Plot the Sex column using different hues
 g = sns.FacetGrid(titanic, col="Survived", row="Pclass", hue="Sex", height=3)
-g.map(sns.kdeplot, "Age", shade=True).add_legend()
+(g.map(sns.kdeplot, "Age", shade=True)).add_legend()
 sns.despine(left=True, bottom=True)
 # Clearly, the several factors seem to be correlated with whether one survived or not during the Titanic's accident
 # Younger women and children seemed to have the most correlation with survival
